@@ -1,0 +1,8 @@
+pandas
+SQLAlchemy
+PyYAML
+psycopg2-binary
+tabula-py
+requests
+boto3
+numpy
