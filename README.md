@@ -87,7 +87,7 @@ Make sure your `db_creds.yaml` file includes the following information:
 - **Database Name**: The name of the database you want to connect to
 
 ### Local PostgreSQL Credentials 
-Make sure yo*ur local_db_creds.yaml file includes the following information:
+Make sure your local_db_creds.yaml file includes the following information:
 - **Username**: Your local PostgreSQL username
 - **Password**: Your local PostgreSQL password
 - **Host**: The hostname for your local PostgreSQL server 
@@ -102,7 +102,7 @@ Make sure yo*ur local_db_creds.yaml file includes the following information:
 Ensure PostgreSQL is installed and running on your system.
     - Locate the Query File.
     - Execute the SQL Query: 
-        - **Using pgAdmin4__**: connect to your PostgreSQL server and Load the query.sql file by clicking on the "Open File" icon.
+        - **Using pgAdmin4**: connect to your PostgreSQL server and Load the query.sql file by clicking on the "Open File" icon.
         - **Using the psql Command-Line Tool**: Replace [your_database] with the name of your local database and run the following command: `psql -U [your_username] -d [your_database] -f `
 
 
