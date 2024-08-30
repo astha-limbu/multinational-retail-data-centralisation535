@@ -6,13 +6,19 @@
     - [Motivation for project](#Motivation-for-project)
     - [Topics covered](#Topics-covered)
 2. [Features](#features)
-    - [User Interaction](#User-Interaction)
-    - [Feedback Managment](#Feedback-Managment)
-    - [Game ending](#Game-ending)
+    - [Requirements.txt file](#Requirements.txt-file)
+    - [ETL Process Implementation](#ETL-Process-Implementation)
+    - [Automated Data Pipeline](#Automate-Data-Pipeline)
+    - [API Integration](#API-Integration)
+    - [Data Type Conversion and Standardisation](#Data-Type-Conversion-and-Standardisation)
+    - [Error Handling and Logging](#Error-Handling-and-Logging)
 3. [Installation instructions](#Installation-instructions)
-4. [Usage instructions](#Usage-instructions)
-5. [File structure](#File-structure)
-6. [License information](#License-information)
+4. [Necessary Credentials](#Necessary-Credentials)
+    -[AWS RDS Credentials](#AWS-RDS-Credentials )
+    -[Local PostgreSQL Credentials](#Local-PostgreSQL-Credentials)
+5. [Usage instructions](#Usage-instructions)
+6. [File structure](#File-structure)
+7. [License information](#License-information)
 
 ## Introduction
 
@@ -49,7 +55,7 @@ This project was created to apply the skills acquired during the AiCore bootcamp
 ### API Integration
 - Implementing interaction with external APIs to fetch real-time data
 
-### Data Type Conversion and Standardization
+### Data Type Conversion and Standardisation
 - Handling non-standard and inconsistent data formats, such as converting weights to a standard unit (e.g. kg), and correcting non-standard dates.
 
 ### Error Handling and Logging
@@ -81,7 +87,7 @@ Make sure your `db_creds.yaml` file includes the following information:
 - **Database Name**: The name of the database you want to connect to
 
 ### Local PostgreSQL Credentials 
-Make sure your local_db_creds.yaml file includes the following information:
+Make sure yo*ur local_db_creds.yaml file includes the following information:
 - **Username**: Your local PostgreSQL username
 - **Password**: Your local PostgreSQL password
 - **Host**: The hostname for your local PostgreSQL server 
@@ -96,17 +102,24 @@ Make sure your local_db_creds.yaml file includes the following information:
 Ensure PostgreSQL is installed and running on your system.
     - Locate the Query File.
     - Execute the SQL Query: 
-        - ••Using pgAdmin4••: connect to your PostgreSQL server and Load the query.sql file by clicking on the "Open File" icon.
-        - ••Using the psql Command-Line Tool••: Replace [your_database] with the name of your local database and run the following command: `psql -U [your_username] -d [your_database] -f `
+        - **Using pgAdmin4__**: connect to your PostgreSQL server and Load the query.sql file by clicking on the "Open File" icon.
+        - **Using the psql Command-Line Tool**: Replace [your_database] with the name of your local database and run the following command: `psql -U [your_username] -d [your_database] -f `
 
 
 ## File structure
-├── main.py                   # Main script to run the entire data pipeline
-├── database_utils.py         # DatabaseConnector class for interacting with the database
-├── data_extraction.py        # DataExtractor class for extracting data from various sources
-├── data_cleaning.py          # DataCleaning class for cleaning and processing the data
-├── requirements.txt          # List of required Python packages
-├── README.md                 # Project documentation
+This project includes the following files:
+- `main.py`  
+  Main script to run the entire data pipeline.
+- `database_utils.py`  
+  Contains the `DatabaseConnector` class for interacting with the database.
+- `data_extraction.py`  
+  Contains the `DataExtractor` class for extracting data from various sources.
+- `data_cleaning.py`  
+  Contains the `DataCleaning` class for cleaning and processing the data.
+- `requirements.txt`  
+  List of required Python packages.
+- `README.md`  
+  Project documentation.
 
 ## License information
 Distributed under the MIT License. See LICENSE for more information.
